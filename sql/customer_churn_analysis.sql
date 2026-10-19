@@ -407,3 +407,90 @@ SELECT
         2
     ) AS avg_monthly_charges_of_churned_customers
 FROM customer_churn;
+
+-- Overall customer churn summary
+SELECT
+    COUNT(*) AS total_customers,
+    COUNT(*) FILTER (
+        WHERE churn = 'Yes'
+    ) AS churned_customers,
+    COUNT(*) FILTER (
+        WHERE churn = 'No'
+    ) AS retained_customers,
+    ROUND(
+        100.0 * COUNT(*) FILTER (
+            WHERE churn = 'Yes'
+        ) / COUNT(*),
+        2
+    ) AS churn_rate_percentage,
+    ROUND(
+        AVG(tenure) FILTER (
+            WHERE churn = 'Yes'
+        ),
+        2
+    ) AS avg_tenure_churned,
+    ROUND(
+        AVG(tenure) FILTER (
+            WHERE churn = 'No'
+        ),
+        2
+    ) AS avg_tenure_retained,
+    ROUND(
+        AVG(monthly_charges) FILTER (
+            WHERE churn = 'Yes'
+        ),
+        2
+    ) AS avg_monthly_charges_churned,
+    ROUND(
+        AVG(monthly_charges) FILTER (
+            WHERE churn = 'No'
+        ),
+        2
+    ) AS avg_monthly_charges_retained
+FROM customer_churn;
+
+-- Churn analysis by contract type
+SELECT
+    contract,
+    COUNT(*) AS total_customers,
+    COUNT(*) FILTER (
+        WHERE churn = 'Yes'
+    ) AS churned_customers,
+    ROUND(
+        100.0 * COUNT(*) FILTER (
+            WHERE churn = 'Yes'
+        ) / COUNT(*),
+        2
+    ) AS churn_rate_percentage
+FROM customer_churn
+GROUP BY contract
+ORDER BY churn_rate_percentage DESC;
+
+-- Churn analysis by customer tenure
+SELECT
+    CASE
+        WHEN tenure <= 12 THEN '0-12 Months'
+        WHEN tenure <= 24 THEN '13-24 Months'
+        WHEN tenure <= 48 THEN '25-48 Months'
+        ELSE '49-72 Months'
+    END AS tenure_group,
+    COUNT(*) AS total_customers,
+    COUNT(*) FILTER (
+        WHERE churn = 'Yes'
+    ) AS churned_customers,
+    ROUND(
+        100.0 * COUNT(*) FILTER (
+            WHERE churn = 'Yes'
+        ) / COUNT(*),
+        2
+    ) AS churn_rate_percentage
+FROM customer_churn
+GROUP BY
+    CASE
+        WHEN tenure <= 12 THEN '0-12 Months'
+        WHEN tenure <= 24 THEN '13-24 Months'
+        WHEN tenure <= 48 THEN '25-48 Months'
+        ELSE '49-72 Months'
+    END
+ORDER BY
+    MIN(tenure);
