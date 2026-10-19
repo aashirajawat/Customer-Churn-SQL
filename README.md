@@ -48,4 +48,8 @@ Customer-Churn-SQL/
 
 ## Key Findings
 
-Findings will be added after validating the query results.
+- **Customer Churn:** Out of 7,043 customers, 1,869 churned, resulting in an overall churn rate of 26.54%.
+- **Customer Retention:** 5,174 customers remained, representing approximately 73.46% of the customer base.
+- **Tenure Pattern:** Churned customers had an average tenure of 17.98 months, compared with 37.57 months for retained customers.
+- **Monthly Charges:** Churned customers had higher average monthly charges (74.44) than retained customers (61.27).
+- **Business Recommendation:** Investigate early-tenure customer experiences and whether higher monthly charges are associated with churn. Consider targeted onboarding and retention offers, then measure their impact.
