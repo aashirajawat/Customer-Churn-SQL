@@ -89,3 +89,14 @@ Customer-Churn-SQL/
 **Key Finding:** Fiber optic customers have the highest churn rate at 41.89%, followed by DSL customers at 18.96%. Customers without internet service have the lowest churn rate at 7.40%.
 
 **Business Recommendation:** Investigate customer satisfaction, pricing, service quality, and support experiences among fiber optic customers to understand the higher churn rate. These results show an association and do not establish the cause of churn.
+
+## Churn Analysis by Senior Citizen Status
+
+| Senior Citizen Status | Total Customers | Churned Customers | Churn Rate |
+|---|---:|---:|---:|
+| No | 5,901 | 1,393 | 23.61% |
+| Yes | 1,142 | 476 | 41.68% |
+
+**Key Finding:** Senior citizens have a churn rate of 41.68%, compared with 23.61% for non-senior customers. This is a difference of 18.07 percentage points.
+
+**Business Recommendation:** Investigate whether customer support needs, service preferences, pricing, or other customer characteristics are associated with the higher churn rate among senior citizens. Use these findings to explore appropriate retention strategies without assuming age is the cause of churn.

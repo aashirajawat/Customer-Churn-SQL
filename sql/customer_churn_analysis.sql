@@ -533,3 +533,17 @@ SELECT
 FROM customer_churn
 GROUP BY internet_service
 ORDER BY churn_rate_percentage DESC;
+
+-- Churn analysis by senior citizen status
+SELECT
+    senior_citizen,
+    COUNT(*) AS total_customers,
+    SUM(CASE WHEN churn = 'Yes' THEN 1 ELSE 0 END) AS churned_customers,
+    ROUND(
+        100.0 * SUM(CASE WHEN churn = 'Yes' THEN 1 ELSE 0 END)
+        / COUNT(*),
+        2
+    ) AS churn_rate_percentage
+FROM customer_churn
+GROUP BY senior_citizen
+ORDER BY senior_citizen;
