@@ -561,3 +561,19 @@ SELECT
 FROM customer_churn
 GROUP BY tech_support
 ORDER BY churn_rate_percentage DESC;
+
+-- Churn analysis by online security
+SELECT
+    online_security,
+    COUNT(*) AS total_customers,
+    SUM(CASE WHEN churn = 'Yes' THEN 1 ELSE 0 END) AS churned_customers,
+    ROUND(
+        100.0 * SUM(CASE WHEN churn = 'Yes' THEN 1 ELSE 0 END)
+        / COUNT(*),
+        2
+    ) AS churn_rate_percentage
+FROM customer_churn
+GROUP BY online_security
+ORDER BY churn_rate_percentage DESC;
+
+

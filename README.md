@@ -112,3 +112,15 @@ Customer-Churn-SQL/
 **Key Finding:** Customers without tech support have a churn rate of 41.64%, compared with 15.17% among customers with tech support.
 
 **Business Recommendation:** Investigate support accessibility, response times, and customer satisfaction to understand this difference. Consider evaluating support improvements as a possible retention strategy; this analysis shows an association, not proof of causation.
+
+## Churn Analysis by Online Security
+
+| Online Security | Total Customers | Churned Customers | Churn Rate |
+|---|---:|---:|---:|
+| No | 3,498 | 1,461 | 41.77% |
+| Yes | 2,019 | 295 | 14.61% |
+| No internet service | 1,526 | 113 | 7.40% |
+
+**Key Finding:** Customers without online security have a churn rate of 41.77%, compared with 14.61% among customers with online security.
+
+**Business Recommendation:** Evaluate whether improving awareness and access to online security services could support customer retention. This analysis identifies an association, not proof of causation.
