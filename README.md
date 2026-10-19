@@ -57,3 +57,9 @@ Customer-Churn-SQL/
 - **Retention Opportunity:** Explore targeted retention offers and improved onboarding for month-to-month customers, and measure whether these initiatives reduce churn.
 - **Tenure Analysis:** Customers with 0–12 months of tenure had the highest churn rate at 47.44%, compared with 28.71% for 13–24 months, 20.39% for 25–48 months, and 9.51% for 49–72 months.
 - **Retention Opportunity:** Investigate early-tenure customer experiences and onboarding to identify opportunities to reduce first-year churn.
+### Revenue Analysis by Churn Status
+- Churned customers have a higher average monthly charge of 74.44 compared with 61.27 for retained customers.
+- The total monthly charges associated with churned customers are 139,130.85, while retained customers account for 316,985.75.
+- Retained customers have total lifetime charges of 13,193,241.80, compared with 2,862,926.90 for churned customers.
+- These findings suggest that customer churn is relevant to revenue analysis. Further investigation is needed to understand the reasons behind higher average charges among churned customers.
+**Business Recommendation:** Analyze pricing plans, contract types, and customer tenure to identify patterns associated with churn and develop suitable retention strategies.

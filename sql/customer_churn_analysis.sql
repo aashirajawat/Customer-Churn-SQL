@@ -494,3 +494,14 @@ GROUP BY
     END
 ORDER BY
     MIN(tenure);
+
+-- Revenue analysis by churn status
+SELECT
+    churn,
+    COUNT(*) AS total_customers,
+    ROUND(SUM(monthly_charges), 2) AS total_monthly_charges,
+    ROUND(AVG(monthly_charges), 2) AS avg_monthly_charges,
+    ROUND(SUM(total_charges), 2) AS total_lifetime_charges
+FROM customer_churn
+GROUP BY churn
+ORDER BY churn;
