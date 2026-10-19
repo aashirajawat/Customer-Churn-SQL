@@ -100,3 +100,15 @@ Customer-Churn-SQL/
 **Key Finding:** Senior citizens have a churn rate of 41.68%, compared with 23.61% for non-senior customers. This is a difference of 18.07 percentage points.
 
 **Business Recommendation:** Investigate whether customer support needs, service preferences, pricing, or other customer characteristics are associated with the higher churn rate among senior citizens. Use these findings to explore appropriate retention strategies without assuming age is the cause of churn.
+
+## Churn Analysis by Tech Support
+
+| Tech Support | Total Customers | Churned Customers | Churn Rate |
+|---|---:|---:|---:|
+| No | 3,473 | 1,446 | 41.64% |
+| Yes | 2,044 | 310 | 15.17% |
+| No internet service | 1,526 | 113 | 7.40% |
+
+**Key Finding:** Customers without tech support have a churn rate of 41.64%, compared with 15.17% among customers with tech support.
+
+**Business Recommendation:** Investigate support accessibility, response times, and customer satisfaction to understand this difference. Consider evaluating support improvements as a possible retention strategy; this analysis shows an association, not proof of causation.
