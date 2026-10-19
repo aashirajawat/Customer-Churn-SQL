@@ -142,3 +142,16 @@ Customer-Churn-SQL/
 **Key Finding:** Customers with fewer counted services generally show higher churn rates. The churn rate is 36.48% for customers with three services, compared with 5.29% for customers with eight services.
 
 **Business Recommendation:** Investigate whether suitable service bundles or targeted offers could improve customer retention. The analysis shows an association, not proof of causation.
+
+## Customer Ranking Using Window Functions
+
+The `RANK()` window function was used to rank customers by total charges in descending order.
+
+**Key Findings:**
+- The highest-ranked customer has total charges of 8,684.80.
+- The top 20 customers have tenure ranging from 71 to 72 months.
+- Their monthly charges range from 114.05 to 118.75.
+
+**SQL Concepts:** Window functions, `RANK()`, `ORDER BY`, and `LIMIT`.
+
+**Business Insight:** Ranking customers by total charges helps identify customers with high cumulative billing for further analysis. High total charges alone do not indicate whether a customer is likely to churn.

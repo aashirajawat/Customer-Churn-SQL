@@ -599,3 +599,17 @@ SELECT
 FROM customer_churn
 GROUP BY number_of_services
 ORDER BY number_of_services;
+
+
+-- Rank customers by total charges
+SELECT
+    customer_id,
+    tenure,
+    monthly_charges,
+    total_charges,
+    RANK() OVER (
+        ORDER BY total_charges DESC
+    ) AS charge_rank
+FROM customer_churn
+ORDER BY charge_rank
+LIMIT 20;
