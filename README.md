@@ -62,5 +62,5 @@ Customer-Churn-SQL/
 - The total monthly charges associated with churned customers are 139,130.85, while retained customers account for 316,985.75.
 - Retained customers have total lifetime charges of 13,193,241.80, compared with 2,862,926.90 for churned customers.
 - These findings suggest that customer churn is relevant to revenue analysis. Further investigation is needed to understand the reasons behind higher average charges among churned customers.
-- 
+  
 **Business Recommendation:** Analyze pricing plans, contract types, and customer tenure to identify patterns associated with churn and develop suitable retention strategies.
