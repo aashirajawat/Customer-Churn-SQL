@@ -53,3 +53,6 @@ Customer-Churn-SQL/
 - **Tenure Pattern:** Churned customers had an average tenure of 17.98 months, compared with 37.57 months for retained customers.
 - **Monthly Charges:** Churned customers had higher average monthly charges (74.44) than retained customers (61.27).
 - **Business Recommendation:** Investigate early-tenure customer experiences and whether higher monthly charges are associated with churn. Consider targeted onboarding and retention offers, then measure their impact.
+
+- **Contract Analysis:** Month-to-month customers had the highest churn rate at 42.71%, compared with 11.27% for one-year contracts and 2.83% for two-year contracts.
+- **Retention Opportunity:** Explore targeted retention offers and improved onboarding for month-to-month customers, and measure whether these initiatives reduce churn.
