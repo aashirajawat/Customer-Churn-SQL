@@ -519,3 +519,17 @@ SELECT
 FROM customer_churn
 GROUP BY payment_method
 ORDER BY churn_rate_percentage DESC;
+
+-- Churn analysis by internet service
+SELECT
+    internet_service,
+    COUNT(*) AS total_customers,
+    SUM(CASE WHEN churn = 'Yes' THEN 1 ELSE 0 END) AS churned_customers,
+    ROUND(
+        100.0 * SUM(CASE WHEN churn = 'Yes' THEN 1 ELSE 0 END)
+        / COUNT(*),
+        2
+    ) AS churn_rate_percentage
+FROM customer_churn
+GROUP BY internet_service
+ORDER BY churn_rate_percentage DESC;

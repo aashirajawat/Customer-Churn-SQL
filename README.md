@@ -77,3 +77,15 @@ Customer-Churn-SQL/
 **Key Finding:** Electronic check customers have the highest churn rate at 45.29%, while automatic credit card customers have the lowest at 15.24%.
 
 **Business Recommendation:** Investigate billing experience, payment preferences, and customer characteristics to understand this pattern. Consider testing convenient payment options as part of customer retention strategies.
+
+## Churn Analysis by Internet Service
+
+| Internet Service | Total Customers | Churned Customers | Churn Rate |
+|---|---:|---:|---:|
+| Fiber optic | 3,096 | 1,297 | 41.89% |
+| DSL | 2,421 | 459 | 18.96% |
+| No internet service | 1,526 | 113 | 7.40% |
+
+**Key Finding:** Fiber optic customers have the highest churn rate at 41.89%, followed by DSL customers at 18.96%. Customers without internet service have the lowest churn rate at 7.40%.
+
+**Business Recommendation:** Investigate customer satisfaction, pricing, service quality, and support experiences among fiber optic customers to understand the higher churn rate. These results show an association and do not establish the cause of churn.
