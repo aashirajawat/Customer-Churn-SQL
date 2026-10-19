@@ -577,3 +577,25 @@ GROUP BY online_security
 ORDER BY churn_rate_percentage DESC;
 
 
+-- Churn analysis by number of services
+SELECT
+    (
+        CASE WHEN phone_service = 'Yes' THEN 1 ELSE 0 END
+        + CASE WHEN multiple_lines = 'Yes' THEN 1 ELSE 0 END
+        + CASE WHEN online_security = 'Yes' THEN 1 ELSE 0 END
+        + CASE WHEN online_backup = 'Yes' THEN 1 ELSE 0 END
+        + CASE WHEN device_protection = 'Yes' THEN 1 ELSE 0 END
+        + CASE WHEN tech_support = 'Yes' THEN 1 ELSE 0 END
+        + CASE WHEN streaming_tv = 'Yes' THEN 1 ELSE 0 END
+        + CASE WHEN streaming_movies = 'Yes' THEN 1 ELSE 0 END
+    ) AS number_of_services,
+    COUNT(*) AS total_customers,
+    SUM(CASE WHEN churn = 'Yes' THEN 1 ELSE 0 END) AS churned_customers,
+    ROUND(
+        100.0 * SUM(CASE WHEN churn = 'Yes' THEN 1 ELSE 0 END)
+        / COUNT(*),
+        2
+    ) AS churn_rate_percentage
+FROM customer_churn
+GROUP BY number_of_services
+ORDER BY number_of_services;

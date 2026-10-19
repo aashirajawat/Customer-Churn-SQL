@@ -124,3 +124,21 @@ Customer-Churn-SQL/
 **Key Finding:** Customers without online security have a churn rate of 41.77%, compared with 14.61% among customers with online security.
 
 **Business Recommendation:** Evaluate whether improving awareness and access to online security services could support customer retention. This analysis identifies an association, not proof of causation.
+
+## Churn Analysis by Number of Services
+
+| Number of Services | Total Customers | Churned Customers | Churn Rate |
+|---:|---:|---:|---:|
+| 0 | 80 | 35 | 43.75% |
+| 1 | 1,701 | 359 | 21.11% |
+| 2 | 1,188 | 390 | 32.83% |
+| 3 | 965 | 352 | 36.48% |
+| 4 | 922 | 289 | 31.34% |
+| 5 | 908 | 232 | 25.55% |
+| 6 | 676 | 152 | 22.49% |
+| 7 | 395 | 49 | 12.41% |
+| 8 | 208 | 11 | 5.29% |
+
+**Key Finding:** Customers with fewer counted services generally show higher churn rates. The churn rate is 36.48% for customers with three services, compared with 5.29% for customers with eight services.
+
+**Business Recommendation:** Investigate whether suitable service bundles or targeted offers could improve customer retention. The analysis shows an association, not proof of causation.
