@@ -505,3 +505,17 @@ SELECT
 FROM customer_churn
 GROUP BY churn
 ORDER BY churn;
+
+-- Churn analysis by payment method
+SELECT
+    payment_method,
+    COUNT(*) AS total_customers,
+    SUM(CASE WHEN churn = 'Yes' THEN 1 ELSE 0 END) AS churned_customers,
+    ROUND(
+        100.0 * SUM(CASE WHEN churn = 'Yes' THEN 1 ELSE 0 END)
+        / COUNT(*),
+        2
+    ) AS churn_rate_percentage
+FROM customer_churn
+GROUP BY payment_method
+ORDER BY churn_rate_percentage DESC;

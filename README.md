@@ -64,3 +64,16 @@ Customer-Churn-SQL/
 - These findings suggest that customer churn is relevant to revenue analysis. Further investigation is needed to understand the reasons behind higher average charges among churned customers.
   
 **Business Recommendation:** Analyze pricing plans, contract types, and customer tenure to identify patterns associated with churn and develop suitable retention strategies.
+
+## Churn Analysis by Payment Method
+
+| Payment Method | Total Customers | Churned Customers | Churn Rate |
+|---|---:|---:|---:|
+| Electronic check | 2,365 | 1,071 | 45.29% |
+| Mailed check | 1,612 | 308 | 19.11% |
+| Bank transfer (automatic) | 1,544 | 258 | 16.71% |
+| Credit card (automatic) | 1,522 | 232 | 15.24% |
+
+**Key Finding:** Electronic check customers have the highest churn rate at 45.29%, while automatic credit card customers have the lowest at 15.24%.
+
+**Business Recommendation:** Investigate billing experience, payment preferences, and customer characteristics to understand this pattern. Consider testing convenient payment options as part of customer retention strategies.
